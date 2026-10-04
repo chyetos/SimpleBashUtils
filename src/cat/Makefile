@@ -1,0 +1,15 @@
+CC=gcc
+FLAGS= -Wall -Wextra -Werror -std=c11
+
+all: s21_cat
+
+s21_cat:
+	$(CC) $(FLAGS) s21_cat.c -o s21_cat
+
+test: all
+	./test.sh
+
+clean:
+	rm -rf s21_cat
+
+rebuild: clean all
